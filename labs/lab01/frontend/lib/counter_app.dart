@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CounterApp extends StatefulWidget {
-  const CounterApp({Key? key}) : super(key: key);
+  const CounterApp({super.key});
 
   @override
   State<CounterApp> createState() => _CounterAppState();
@@ -10,6 +10,7 @@ class CounterApp extends StatefulWidget {
 class _CounterAppState extends State<CounterApp> {
   int _counter = 0;
 
+<<<<<<< HEAD
   void _incrementCounter() {
     // TODO: Implement this function
   }
@@ -53,6 +54,39 @@ class _CounterAppState extends State<CounterApp> {
           ],
         ),
       ),
+=======
+  void _increment() => setState(() => _counter++);
+  void _decrement() => setState(() => _counter--);
+  void _reset() => setState(() => _counter = 0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          '$_counter',
+          style: const TextStyle(fontSize: 40),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.remove),
+              onPressed: _decrement,
+            ),
+            IconButton(
+              icon: const Icon(Icons.refresh),
+              onPressed: _reset,
+            ),
+            IconButton(
+              icon: const Icon(Icons.add),
+              onPressed: _increment,
+            ),
+          ],
+        ),
+      ],
+>>>>>>> a0b7266 (lab01: реализованы базовые задачи Go и Flutter)
     );
   }
 }
