@@ -44,32 +44,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text('Lab 01 Demo'),
-          bottom: const TabBar(
-            tabs: [
-              Tab(text: 'Profile'),
-              Tab(text: 'Counter'),
-              Tab(text: 'Register'),
-            ],
-          ),
-        ),
-        body: const TabBarView(
-          children: [
-            Center(
-              child: SingleChildScrollView(
-                padding: EdgeInsets.all(16.0),
-                // TODO: change to ProfileCard
-                child: SizedBox.shrink(),
-              ),
-            ),
-            CounterApp(),
-=======
     return Scaffold(
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
@@ -109,7 +83,6 @@ class MyHomePage extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
->>>>>>> 8316252 (WIP: сохранить изменения перед обновлением ветки)
             RegistrationForm(),
           ],
         ),
